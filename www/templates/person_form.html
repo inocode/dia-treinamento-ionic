@@ -1,0 +1,31 @@
+<ion-view view-title="Pessoa">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Nome" ng-model="person.name">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Endereço" ng-model="person.address">
+      </label>
+      <label class="item item-input">
+        <input type="date" placeholder="Data de nascimento" ng-model="person.bornDate">
+      </label>
+      <div class="item">
+        <button class="button button-block" ng-click="takePicture()">Foto</button>
+        <img src="data:image/jpeg;base64,{{person.photo_data}}" class="img-responsive" ng-show="person.photo_data">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <button class="button button-block button-positive" ng-click="save()">
+          Gravar
+        </button>
+      </div>
+      <div class="col col-50">
+        <button class="button button-block button-default" ng-click="back()">
+          Voltar
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
